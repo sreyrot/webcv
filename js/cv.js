@@ -24,21 +24,29 @@ $(document).ready(function(){
                         </div>
                         <div class="row">
                             <div class="col-2"></div>
-                            <div class="col-8 mt-3 mb-3 " id="text-align">
-                                <h4 >${el.data().firstName.toUpperCase()} ${el.data().lastName.toUpperCase()}</h4>
-                                <p >${el.data().major.toUpperCase()}</p>
+                            <div class="col-8 mt-3 mb-3 " >
+                                <h4 class="text-center" >${el.data().firstName.toUpperCase()} ${el.data().lastName.toUpperCase()}</h4>
+                                <p class="text-center">${el.data().major.toUpperCase()}</p>
                                 <hr>
+                                <i class="fa fa-envelope" style="color: blue" aria-hidden="true"></i>   
                                 <span >${el.data().mail}</span> <br>
+                                <i class="fa fa-phone" style="color: green" aria-hidden="true"></i>
                                 <span >${el.data().contact}</span> <br>
+                                <i class="fa fa-flag" style="color: brown" aria-hidden="true"></i>
                                 <span >${el.data().national}</span> <br>
                                 <hr>
+                                <i class="fa fa-transgender" style="color: gold" aria-hidden="true"></i>
                                 <span >${el.data().sex}</span> <br>
+                                <i class="fa fa-heart" style="color: red" aria-hidden="true"></i>
                                 <span >${el.data().maritalStatus}</span> <br>
+                                <i class="fa fa-calendar" style="color: purple" aria-hidden="true"></i>
                                 <span >${el.data().dateOfBirth}</span> <br>
+                                <i class="fa fa-map" style="color: orange" aria-hidden="true"></i>
                                 <span >${el.data().placeOfBirth}</span> <br>
                                 <hr>
-                                    <p><b>INTEREST</b></p>
-                                    <span >${el.data().interest}</span>
+                                    <i class="fa fa-book" style="color: pink" aria-hidden="true"> Reading book</i><br>
+                                    <i class="fa fa-search" style="color: #33ccff" aria-hidden="true"> Research</i><br>
+                                    <i class="fa fa-soccer-ball-o" style="color: #6633ff" aria-hidden="true"> Football</i><br>
                                 <hr>
                                 <a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fa fa-facebook-square"aria-hidden="true"></i></a> <br>
                                 <a href="https://web.facebook.com/?_rdc=1&_rdr">Facebook</a> <br>
@@ -46,17 +54,15 @@ $(document).ready(function(){
                                 <a class="text-danger" href="https://www.instagram.com/?hl=en">Instagram</a> <br>
                                 </div>
                             <div class="col-2"></div>
-                            <div  id="footer"> 
-                                <p class="mt-3 ml-5">&copy; ${dd}/${mm}/${yyyy}</p>
-                            </div>
+                          
                         </div>
                     </div>
                     <div class="col-7" >
-                        <h1 class="text-center mt-3 " id="right-text-header">Personal Data</h1>
+                        <h1 class="text-center mt-3 " id="right-text-header ">Personal Data</h1>
                         <p class="text-center ">${el.data().curentJob.toUpperCase()}</p>
                         <hr>
                         <div class="row">
-                            <i class="fa fa-graduation-cap ml-3" id="icon"></i>
+                            <i class="fa fa-graduation-cap ml-3" style="color: #004d99" id="icon"></i>
                             <h4 id="right-text-header" class="ml-2"><strong>Education Backgroun</strong></h4>
                         </div>
                             <p><b>2018 - Present:</b>  Passerelles Numériques Cambodia  </p>
@@ -70,7 +76,7 @@ $(document).ready(function(){
                             </ul>
                             <hr>
                         <div class="row">
-                            <i class="fa fa-cogs ml-3" id="icon"></i>
+                            <i class="fa fa-cogs ml-3" style="color: #33ffff" id="icon"></i>
                             <h4 id="right-text-header" class="ml-2"><strong>Skill</strong></h4>
                         </div>
                         <p><b>Hard Skill: </b></p>
@@ -83,7 +89,7 @@ $(document).ready(function(){
                         </ul>
                         <hr>
                         <div class="row">
-                            <i class="fa fa-tasks ml-3" id="icon"></i>
+                            <i class="fa fa-tasks ml-3" style="color: #cc33ff" id="icon"></i>
                             <h4 id="right-text-tasks" class="ml-2"><strong>Work Experience</strong></h4>
                         </div>
                         <p><b>Virtual Company I:</b></p>
@@ -94,13 +100,14 @@ $(document).ready(function(){
                         <ul> 
                             <li>${el.data().vertual2}</li>
                         </ul>
-                        <hr>
                     </div>
                     <div class="col-1"></div>
                 </div>
             </div>
            
             `;
+
+            console.log(el);
         })
       $('#result').append($result);
     })

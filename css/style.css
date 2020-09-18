@@ -14,16 +14,10 @@ img{
 #right-sidebar{
     background-color: antiquewhite;
     border-right: 5px solid red;
+    
 }
-#text-align{
-    text-align: center;
-}
-#footer{
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    color: #fff;
-}
+
+
 #right-text-header{
     font-family: "Times New Roman", Times, serif;
 }
