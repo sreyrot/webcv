@@ -18,7 +18,7 @@ $(document).ready(function(){
                         <div class="row">
                             <div class="col-4"></div>
                             <div class="col-4 mt-3 mb-3">
-                                <img src="${el.data().profile}" alt="" id="profile">
+                                <img src="../img/picme.jpg" alt="" id="profile">
                             </div>
                             <div class="col-4"></div>
                         </div>
