@@ -1,14 +1,14 @@
 
 
-$(document).ready(function(){
+$(document).ready(function () {
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
-    
+
     db.collection('personaldata').get().then(data => {
         $result = "";
-        data.forEach(el =>{
+        data.forEach(el => {
             $result += `
             <link rel="stylesheet" href="../css/style.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,11 +20,15 @@ $(document).ready(function(){
                             <div class="col-4 mt-3 mb-3">
                                 <img src="../img/picme.jpg" alt="" id="profile">
                             </div>
+        
+
                             <div class="col-4"></div>
                         </div>
                         <div class="row">
-                            <div class="col-2"></div>
+                            <div class="col-2"><button​ class="btn btn-primary">Go Detail</button></div>
+                            
                             <div class="col-8 mt-3 mb-3 " >
+                            
                                 <h4 class="text-center" >${el.data().firstName.toUpperCase()} ${el.data().lastName.toUpperCase()}</h4>
                                 <p class="text-center">${el.data().major.toUpperCase()}</p>
                                 <hr>
@@ -109,6 +113,6 @@ $(document).ready(function(){
 
             console.log(el);
         })
-      $('#result').append($result);
+        $('#result').append($result);
     })
 });
